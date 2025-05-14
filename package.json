@@ -4,8 +4,7 @@
   "description": "- we initalize the project setup frontend and Backend we use typescript also",
   "main": "index.js",
   "scripts": {
-   "build": "node index.js",
-    "dev": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
