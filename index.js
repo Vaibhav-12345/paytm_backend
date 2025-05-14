@@ -15,7 +15,9 @@ app.use(cors())
 app.use(express.json())
 
 
-
+app.get('/',(req,res)=>{
+   res.send('backend is running')
+})
 app.use('/api/v1/user',userRouter)
 app.use('/api/v1/account',accountRouter)
 
