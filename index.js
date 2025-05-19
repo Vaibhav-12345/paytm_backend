@@ -8,9 +8,19 @@ const cors = require('cors')
 const { userRouter } = require('./routes/user');
 const { accountRouter } = require('./routes/account');
 
+const FRONTEND_URL=require('./config')
+
 const mongoose=require('mongoose')
 
-app.use(cors())
+const allowedOrigins = [
+  FRONTEND_URL,
+  'http://localhost:3000'
+];
+
+app.use(cors({
+  origin:allowedOrigins,
+  credentials:true
+}))
 // body barser 
 app.use(express.json())
 
